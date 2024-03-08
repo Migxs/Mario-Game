@@ -1,0 +1,55 @@
+*, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#mario {
+    display: flex;
+    width: 110px;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    transition: bottom .3s;
+}
+
+#mario img {
+    display: block;
+    width: 140px;
+}
+
+#mario.jump {
+    bottom: 200px;
+}
+
+.game-board {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(skyblue, white);
+    border-bottom: 20px solid green;
+    overflow: hidden;
+}
+
+#pipe {
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: pipe 1s infinite linear;
+}
+
+#pipe img {
+    width: 100%;
+    display: block;
+}
+
+@keyframes pipe {
+    from {
+        right: -100px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
